@@ -1,0 +1,22 @@
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+#N,#X{
+	width: 42px;
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 40px;
+}
+
+.symbol ,#result{
+	font-size: 50px;
+    padding: 35px;
+}
+
+body{
+	background-color: grey;
+}

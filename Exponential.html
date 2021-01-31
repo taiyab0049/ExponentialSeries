@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculate Exponential</title>
+</head>
+<link rel="stylesheet" type="text/css" href="expo.css">
+<body>
+	<form>
+	<div class="container">
+		<div class="ipbox"><input type="text" name="n" id="N" placeholder="n" onkeyup ="mainFunction()" /></div>
+		<div class="symbol">e</div>
+		<div class="ipbox"><input type="text" name="r" id="X" placeholder="x" onkeyup ="mainFunction()" /></div>
+		<div class="symbol">=</div>
+		<div id="result"></div>
+	</div>
+	</form>
+
+</body>
+<script type="text/javascript">
+	function mainFunction(){
+		var n1 = document.getElementById('N').value;
+		var x1 = document.getElementById('X').value;
+		if(!x1 || !n1) return;
+		var finalResult = 1;
+		for (var i = 1; i <= n1; i++) {
+		 	finalResult += (calculatePower(x1,i)/calculateFacto(i));
+		 	console.log( finalResult );
+		 } 
+		 	
+	    var result = document.getElementById('result');
+		result.innerHTML = finalResult;
+	}
+	function calculateFacto(num){
+		var fact = 1 ;
+		for (var i = num; i >= 1; i--) {
+			fact = fact * i ;
+		}
+		return fact;
+	}
+	function calculatePower(base, exponent){
+		var power = Math.pow(base, exponent);
+		return power;
+
+	}
+		console.log(calculatePower(2,4));
+
+</script>
+</html>
